@@ -1,0 +1,58 @@
+
+<table>
+  <thead>
+    <tr>
+      <th class="col col-5">Host</th>
+      <th class="col col-3 align-right">Views</th>
+      <th class="col col-4 align-right">
+        <a class="btn btn-outline-success" href="<%= Routes.live_path(@socket, DomainLive.New) %>" >
+          Add Domain
+        </a>
+      </th>
+    </tr>
+  </thead>
+  <%= for domain <- Map.values(@domains) do %>
+    <tr>
+      <td class="col col-5">
+        <H2><%= display_name(domain) %></H2>
+      </td>
+      <td class="col col-3 align-right">
+        <H2><%= domain.count %></H2>
+      </td>
+      <td class="col col-4 align-right">
+        <a class="btn btn-sm" href="<%= Routes.live_path(@socket, DomainLive.Edit, domain) %>">
+          <H3>
+          <i class="fa fa-pencil"></i>
+          </H3>
+        </a>
+        <a class="btn btn-sm" href="#" data-confirm="Are you sure?" phx-click="delete_domain" phx-value="<%= domain.id %>">
+          <H3>
+          <i class="fa fa-trash"></i>
+          </H3>
+        </a>
+      </td>
+    </tr>
+  <% end %>
+  <tr>
+    <td></td>
+    <td class="align-right">
+      <h2>
+        <%= @total_count %></td>
+      </h2>
+    <td>
+      Total Views
+    </th>
+  </tr>
+  <tr>
+    <td></td>
+    <td class="align-right">
+      <h4>
+        <%= @short_term %> / <%= @long_term %>
+      </h4>
+    <td>
+      Pages Per Day<br>
+      (Short Term/Long Term)
+    </th>
+  </tr>
+</table>
+

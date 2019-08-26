@@ -1,0 +1,25 @@
+<%= f = form_for @changeset, "#", [phx_change: :validate, phx_submit: :save] %>
+
+  <%= label f, :host %>
+  <%= text_input f, :host %>
+  <%= error_tag f, :host %>
+
+  <%= label f, :name %>
+  <%= text_input f, :name %>
+  <%= error_tag f, :name %>
+
+  <%= label f, :tagline %>
+  <%= text_input f, :tagline %>
+  <%= error_tag f, :tagline %>
+
+  <%= label f, :color %>
+  <%= color_input f, :color %>
+  <%= error_tag f, :color %>
+
+  <div class="row">
+    <div class="col-6"><%= link "Cancel", class: "btn btn-lg btn-secondary", to: Routes.live_path(@socket, DomainLive.Index) %></div>
+   <div class="col-6 align-right">
+    <%= submit "Save", phx_disable_with: "Saving..." %>
+    </div>
+  </div>
+</form>

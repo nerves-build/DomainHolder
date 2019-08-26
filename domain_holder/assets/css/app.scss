@@ -1,0 +1,203 @@
+/* This file is for your main application css. */
+
+$fa-font-path: "~font-awesome/fonts";
+@import '~font-awesome/scss/font-awesome.scss';
+@import "custom";
+@import "~bootstrap/scss/bootstrap";
+
+.river_header {
+  background-color: #CCCCDD;
+  .btn-sm {
+    padding: 0.25rem;
+  }
+}
+
+table {
+  table-layout: fixed ;
+}
+
+.my-panel {
+  padding-top: 0px;
+  padding-bottom: 32px;
+}
+
+.tab-content {
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+main {
+  padding-left: 80px;
+  padding-right: 80px;
+  padding-bottom: 180px;
+}
+
+.absolute-right-btn {
+  position: absolute;
+  right: 80px;
+}
+
+.card-body {
+  padding: 0.5rem;
+  h5 {
+    font-size: 0.95rem;
+  }
+  .card-text {
+    font-size: 0.8rem;
+  }
+  .date_box {
+    position: absolute;
+    right: 4px;
+    bottom: 4px;
+    font-size: 0.5rem;
+  }
+}
+.card-link + .card-link {
+    margin-left: .25rem;
+}
+
+.blocker {
+  clear: both;
+}
+
+.card .feedflare {
+  display: none;
+}
+
+li.nav-item{
+  display: inline-block;
+}
+
+.nav-tabs .nav-link.active {
+  border-color: #607c8a;
+}
+ul.nav.nav-tabs{
+  padding-bottom: 1px;
+}
+
+ul.nav.nav-tabs:hover{
+  padding-bottom: 1px;
+}
+
+.nav-tabs .nav-link {
+  border-bottom: 1;
+}
+
+
+.dial-wrapper-45,
+.dial-wrapper-90 {
+  width: 200px;
+  height: 200px;
+  margin: 50px auto;
+  position: relative;
+}
+
+.dial {
+  border: 100px solid #ccc;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.dial-arm {
+  width: 3px;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: 99;
+}
+
+.dial-arm:before {
+  position: absolute;
+  content: "";
+  background: black;
+  height: 140px;
+  width: 3px;
+  top: calc(50% - 25px);
+}
+
+.circle {
+  position: absolute;
+  border: 50px solid white;
+  border-radius: 50%;
+  left: calc(50% - 50px);
+  top: calc(50% - 50px);
+  z-index: 20;
+}
+
+.rcircle {
+  position: absolute;
+  border: 50px solid white;
+  border-radius: 50%;
+  left: calc(50% - 50px);
+  top: calc(50% - 50px);
+  z-index: 20;
+}
+
+.rocircle {
+  position: absolute;
+  border: 2px solid black;
+  border-radius: 50%;
+  left: calc(50% - 52px);
+  top: calc(50% - 52px);
+  z-index: 19;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  position: absolute;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-bottom: 100px solid white;
+  left: calc(50% - 100px);
+  bottom: 0;
+  z-index: 10;
+}
+.align-right {
+  text-align: right;
+}
+.align-center {
+  text-align: center;
+}
+.circle {
+  position: absolute;
+  border: 50px solid white;
+  border-radius: 50%;
+  left: calc(50% - 50px);
+  top: calc(50% - 50px);
+  z-index: 20;
+}
+
+.rcircle {
+  position: relative;
+  border: 50px solid white;
+  border-radius: 50%;
+  left: calc(50% - 50px);
+  top: calc(50% - 50px);
+  z-index: 20;
+}
+
+.small-circle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: black;
+  border-radius: 50%;
+  left: calc(50% - 10px);
+  bottom: calc(50% - 10px);
+  z-index: 30;
+}
+
+.blackout {
+  border: 100px solid #111;
+  border-top: 100px solid transparent;
+  border-left: 100px solid transparent;
+  border-bottom: 100px solid transparent;
+  transform: rotate(45deg);
+  border-radius: 50%;
+  position: absolute;
+}
+
+
